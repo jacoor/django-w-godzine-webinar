@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Notatki</h1>
+<ul>
+    {% for object in object_list %}
+    <li><a href="{% url 'note_detail' object.pk %}">{{object}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
